@@ -1,0 +1,5 @@
+	Mycoplasma_agalactiae	Mycoplasma_gallisepticum	Mycoplasma_genitalium	Mycoplasma_hyopneumoniae
+Mycoplasma_agalactiae	0.0	325.0	288.0	360.0
+Mycoplasma_gallisepticum	325.0	0.0	364.0	317.0
+Mycoplasma_genitalium	288.0	364.0	0.0	280.0
+Mycoplasma_hyopneumoniae	360.0	317.0	280.0	0.0

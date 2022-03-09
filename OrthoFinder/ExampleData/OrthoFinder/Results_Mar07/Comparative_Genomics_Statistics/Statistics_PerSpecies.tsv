@@ -1,0 +1,100 @@
+	Mycoplasma_agalactiae	Mycoplasma_gallisepticum	Mycoplasma_genitalium	Mycoplasma_hyopneumoniae
+Number of genes	820	763	476	674
+Number of genes in orthogroups	648	598	420	550
+Number of unassigned genes	172	165	56	124
+Percentage of genes in orthogroups	79.0	78.4	88.2	81.6
+Percentage of unassigned genes	21.0	21.6	11.8	18.4
+Number of orthogroups containing species	457	455	382	438
+Percentage of orthogroups containing species	75.2	74.8	62.8	72.0
+Number of species-specific orthogroups	42	16	4	36
+Number of genes in species-specific orthogroups	183	114	9	114
+Percentage of genes in species-specific orthogroups	22.3	14.9	1.9	16.9
+
+
+Number of genes per-species in orthogroup	Number of orthogroups	Number of orthogroups	Number of orthogroups	Number of orthogroups
+'0	151	153	226	170
+'1	384	408	356	387
+'2	32	34	21	27
+'3	26	5	4	11
+'4	6	1	0	5
+'5	3	0	0	2
+'6	2	1	0	2
+'7	0	3	0	2
+'8	0	1	0	1
+'9	0	0	0	0
+'10	2	0	1	0
+11-15	1	1	0	1
+16-20	0	0	0	0
+21-50	1	0	0	0
+51-100	0	1	0	0
+101-150	0	0	0	0
+151-200	0	0	0	0
+201-500	0	0	0	0
+501-1000	0	0	0	0
+'1001+	0	0	0	0
+
+Number of genes per-species in orthogroup	Percentage of orthogroups	Percentage of orthogroups	Percentage of orthogroups	Percentage of orthogroups
+'0	24.8	25.2	37.2	28.0
+'1	63.2	67.1	58.6	63.7
+'2	5.3	5.6	3.5	4.4
+'3	4.3	0.8	0.7	1.8
+'4	1.0	0.2	0.0	0.8
+'5	0.5	0.0	0.0	0.3
+'6	0.3	0.2	0.0	0.3
+'7	0.0	0.5	0.0	0.3
+'8	0.0	0.2	0.0	0.2
+'9	0.0	0.0	0.0	0.0
+'10	0.3	0.0	0.2	0.0
+11-15	0.2	0.2	0.0	0.2
+16-20	0.0	0.0	0.0	0.0
+21-50	0.2	0.0	0.0	0.0
+51-100	0.0	0.2	0.0	0.0
+101-150	0.0	0.0	0.0	0.0
+151-200	0.0	0.0	0.0	0.0
+201-500	0.0	0.0	0.0	0.0
+501-1000	0.0	0.0	0.0	0.0
+'1001+	0.0	0.0	0.0	0.0
+
+Number of genes per-species in orthogroup	Number of genes	Number of genes	Number of genes	Number of genes
+'0	0	0	0	0
+'1	384	408	356	387
+'2	64	68	42	54
+'3	78	15	12	33
+'4	24	4	0	20
+'5	15	0	0	10
+'6	12	6	0	12
+'7	0	21	0	14
+'8	0	8	0	8
+'9	0	0	0	0
+'10	20	0	10	0
+11-15	15	13	0	12
+16-20	0	0	0	0
+21-50	36	0	0	0
+51-100	0	55	0	0
+101-150	0	0	0	0
+151-200	0	0	0	0
+201-500	0	0	0	0
+501-1000	0	0	0	0
+'1001+	0	0	0	0
+
+Number of genes per-species in orthogroup	Percentage of genes	Percentage of genes	Percentage of genes	Percentage of genes
+'0	0.0	0.0	0.0	0.0
+'1	46.8	53.5	74.8	57.4
+'2	7.8	8.9	8.8	8.0
+'3	9.5	2.0	2.5	4.9
+'4	2.9	0.5	0.0	3.0
+'5	1.8	0.0	0.0	1.5
+'6	1.5	0.8	0.0	1.8
+'7	0.0	2.8	0.0	2.1
+'8	0.0	1.0	0.0	1.2
+'9	0.0	0.0	0.0	0.0
+'10	2.4	0.0	2.1	0.0
+11-15	1.8	1.7	0.0	1.8
+16-20	0.0	0.0	0.0	0.0
+21-50	4.4	0.0	0.0	0.0
+51-100	0.0	7.2	0.0	0.0
+101-150	0.0	0.0	0.0	0.0
+151-200	0.0	0.0	0.0	0.0
+201-500	0.0	0.0	0.0	0.0
+501-1000	0.0	0.0	0.0	0.0
+'1001+	0.0	0.0	0.0	0.0

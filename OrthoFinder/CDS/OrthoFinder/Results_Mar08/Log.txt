@@ -1,0 +1,13 @@
+2022-03-08 19:56:36 : Started OrthoFinder version 2.5.4
+Command Line: OrthoFinder/orthofinder -f OrthoFinder/CDS -d
+
+WorkingDirectory_Base: /home/doriswu/R/gene-phylogeny-pipeline/OrthoFinder/CDS/OrthoFinder/Results_Mar08/WorkingDirectory/
+
+Species used: 
+0: afumigatus.fasta
+1: anidulans.fasta
+2: calbicans.fasta
+
+
+ERROR: An error occurred
+ERROR: diamond makedb failed

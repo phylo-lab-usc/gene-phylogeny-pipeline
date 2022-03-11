@@ -1,0 +1,3 @@
+0: afumigatus.fasta
+1: anidulans.fasta
+2: calbicans.fasta

@@ -1,0 +1,1 @@
+(afumigatus:0.5,(calbicans:1,anidulans:1)N1:0.5)N0;

@@ -1,0 +1,13 @@
+2022-03-11 20:03:17 : Started OrthoFinder version 2.5.4
+Command Line: OrthoFinder/orthofinder -f OrthoFinder/CDS -d -S diamond
+
+WorkingDirectory_Base: /home/doriswu/R/gene-phylogeny-pipeline/OrthoFinder/CDS/OrthoFinder/Results_Mar11_1/WorkingDirectory/
+
+Species used: 
+0: afumigatus.fasta
+1: anidulans.fasta
+2: calbicans.fasta
+
+FN_Orthogroups: /home/doriswu/R/gene-phylogeny-pipeline/OrthoFinder/CDS/OrthoFinder/Results_Mar11_1/WorkingDirectory/clusters_OrthoFinder_I1.5.txt_id_pairs.txt
+WorkingDirectory_Trees: /home/doriswu/R/gene-phylogeny-pipeline/OrthoFinder/CDS/OrthoFinder/Results_Mar11_1/WorkingDirectory/
+2022-03-11 20:05:45 : OrthoFinder run completed

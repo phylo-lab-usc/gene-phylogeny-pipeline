@@ -1,0 +1,69 @@
+Orthogroup	Species Tree Node	Gene Tree Node	Support	Type	Genes 1	Genes 2
+OG0000000	anidulans	n0	1.0	Terminal	anidulans_AN0004	anidulans_AN10001, anidulans_AN7830, anidulans_AN10846, anidulans_AN2714, anidulans_AN0376, anidulans_AN8576, anidulans_AN2713, anidulans_AN3471, anidulans_AN10632, anidulans_AN5095, anidulans_AN3500, anidulans_AN8295, anidulans_AN8305, anidulans_AN10000, anidulans_AN2670, anidulans_AN10649, anidulans_AN5470, anidulans_AN7845, anidulans_AN6968, anidulans_AN5065, anidulans_AN7831, anidulans_AN7846, anidulans_AN10256, anidulans_AN6966
+OG0000000	anidulans	n1	1.0	Terminal	anidulans_AN10001	anidulans_AN7830, anidulans_AN10846, anidulans_AN2714, anidulans_AN0376, anidulans_AN8576, anidulans_AN2713, anidulans_AN3471, anidulans_AN10632, anidulans_AN5095, anidulans_AN3500, anidulans_AN8295, anidulans_AN8305, anidulans_AN10000, anidulans_AN2670, anidulans_AN10649, anidulans_AN5470, anidulans_AN7845, anidulans_AN6968, anidulans_AN5065, anidulans_AN7831, anidulans_AN7846, anidulans_AN10256, anidulans_AN6966
+OG0000000	anidulans	n2	1.0	Terminal	anidulans_AN7830	anidulans_AN10846, anidulans_AN2714, anidulans_AN0376, anidulans_AN8576, anidulans_AN2713, anidulans_AN3471, anidulans_AN10632, anidulans_AN5095, anidulans_AN3500, anidulans_AN8295, anidulans_AN8305, anidulans_AN10000, anidulans_AN2670, anidulans_AN10649, anidulans_AN5470, anidulans_AN7845, anidulans_AN6968, anidulans_AN5065, anidulans_AN7831, anidulans_AN7846, anidulans_AN10256, anidulans_AN6966
+OG0000000	anidulans	n3	1.0	Terminal	anidulans_AN10846, anidulans_AN2714, anidulans_AN0376, anidulans_AN8576, anidulans_AN2713, anidulans_AN3471, anidulans_AN10632	anidulans_AN5095, anidulans_AN3500, anidulans_AN8295, anidulans_AN8305, anidulans_AN10000, anidulans_AN2670, anidulans_AN10649, anidulans_AN5470, anidulans_AN7845, anidulans_AN6968, anidulans_AN5065, anidulans_AN7831, anidulans_AN7846, anidulans_AN10256, anidulans_AN6966
+OG0000000	anidulans	n4	1.0	Terminal	anidulans_AN10846, anidulans_AN2714, anidulans_AN0376, anidulans_AN8576, anidulans_AN2713, anidulans_AN3471	anidulans_AN10632
+OG0000000	anidulans	n5	1.0	Terminal	anidulans_AN10846, anidulans_AN2714, anidulans_AN0376	anidulans_AN8576, anidulans_AN2713, anidulans_AN3471
+OG0000000	anidulans	n6	1.0	Terminal	anidulans_AN10846	anidulans_AN2714, anidulans_AN0376
+OG0000000	anidulans	n7	1.0	Terminal	anidulans_AN2714	anidulans_AN0376
+OG0000000	anidulans	n8	1.0	Terminal	anidulans_AN8576	anidulans_AN2713, anidulans_AN3471
+OG0000000	anidulans	n9	1.0	Terminal	anidulans_AN2713	anidulans_AN3471
+OG0000000	anidulans	n10	1.0	Terminal	anidulans_AN5095, anidulans_AN3500, anidulans_AN8295, anidulans_AN8305, anidulans_AN10000	anidulans_AN2670, anidulans_AN10649, anidulans_AN5470, anidulans_AN7845, anidulans_AN6968, anidulans_AN5065, anidulans_AN7831, anidulans_AN7846, anidulans_AN10256, anidulans_AN6966
+OG0000000	anidulans	n11	1.0	Terminal	anidulans_AN5095	anidulans_AN3500, anidulans_AN8295, anidulans_AN8305, anidulans_AN10000
+OG0000000	anidulans	n12	1.0	Terminal	anidulans_AN3500	anidulans_AN8295, anidulans_AN8305, anidulans_AN10000
+OG0000000	anidulans	n13	1.0	Terminal	anidulans_AN8295, anidulans_AN8305	anidulans_AN10000
+OG0000000	anidulans	n14	1.0	Terminal	anidulans_AN8295	anidulans_AN8305
+OG0000000	anidulans	n15	1.0	Terminal	anidulans_AN2670, anidulans_AN10649, anidulans_AN5470, anidulans_AN7845, anidulans_AN6968, anidulans_AN5065	anidulans_AN7831, anidulans_AN7846, anidulans_AN10256, anidulans_AN6966
+OG0000000	anidulans	n16	1.0	Terminal	anidulans_AN2670, anidulans_AN10649, anidulans_AN5470, anidulans_AN7845, anidulans_AN6968	anidulans_AN5065
+OG0000000	anidulans	n17	1.0	Terminal	anidulans_AN2670, anidulans_AN10649, anidulans_AN5470	anidulans_AN7845, anidulans_AN6968
+OG0000000	anidulans	n18	1.0	Terminal	anidulans_AN2670, anidulans_AN10649	anidulans_AN5470
+OG0000000	anidulans	n19	1.0	Terminal	anidulans_AN2670	anidulans_AN10649
+OG0000000	anidulans	n20	1.0	Terminal	anidulans_AN7845	anidulans_AN6968
+OG0000000	anidulans	n21	1.0	Terminal	anidulans_AN7831	anidulans_AN7846, anidulans_AN10256, anidulans_AN6966
+OG0000000	anidulans	n22	1.0	Terminal	anidulans_AN7846	anidulans_AN10256, anidulans_AN6966
+OG0000000	anidulans	n23	1.0	Terminal	anidulans_AN10256	anidulans_AN6966
+OG0000001	anidulans	n0	1.0	Terminal	anidulans_AN6559	anidulans_AN3478, anidulans_AN4391, anidulans_AN11091, anidulans_AN0975, anidulans_AN11044, anidulans_AN9046, anidulans_AN9505, anidulans_AN5863, anidulans_AN7516, anidulans_AN4877, anidulans_AN3047, anidulans_AN2291, anidulans_AN0669, anidulans_AN2732, anidulans_AN5334, anidulans_AN8788, anidulans_AN0826
+OG0000001	anidulans	n1	1.0	Terminal	anidulans_AN3478	anidulans_AN4391, anidulans_AN11091, anidulans_AN0975, anidulans_AN11044, anidulans_AN9046, anidulans_AN9505, anidulans_AN5863, anidulans_AN7516, anidulans_AN4877, anidulans_AN3047, anidulans_AN2291, anidulans_AN0669, anidulans_AN2732, anidulans_AN5334, anidulans_AN8788, anidulans_AN0826
+OG0000001	anidulans	n2	1.0	Terminal	anidulans_AN4391	anidulans_AN11091, anidulans_AN0975, anidulans_AN11044, anidulans_AN9046, anidulans_AN9505, anidulans_AN5863, anidulans_AN7516, anidulans_AN4877, anidulans_AN3047, anidulans_AN2291, anidulans_AN0669, anidulans_AN2732, anidulans_AN5334, anidulans_AN8788, anidulans_AN0826
+OG0000001	anidulans	n3	1.0	Terminal	anidulans_AN11091, anidulans_AN0975, anidulans_AN11044, anidulans_AN9046, anidulans_AN9505, anidulans_AN5863, anidulans_AN7516, anidulans_AN4877, anidulans_AN3047, anidulans_AN2291, anidulans_AN0669, anidulans_AN2732, anidulans_AN5334, anidulans_AN8788	anidulans_AN0826
+OG0000001	anidulans	n4	1.0	Terminal	anidulans_AN11091, anidulans_AN0975, anidulans_AN11044, anidulans_AN9046, anidulans_AN9505, anidulans_AN5863, anidulans_AN7516	anidulans_AN4877, anidulans_AN3047, anidulans_AN2291, anidulans_AN0669, anidulans_AN2732, anidulans_AN5334, anidulans_AN8788
+OG0000001	anidulans	n5	1.0	Terminal	anidulans_AN11091, anidulans_AN0975, anidulans_AN11044, anidulans_AN9046, anidulans_AN9505, anidulans_AN5863	anidulans_AN7516
+OG0000001	anidulans	n6	1.0	Terminal	anidulans_AN11091, anidulans_AN0975, anidulans_AN11044	anidulans_AN9046, anidulans_AN9505, anidulans_AN5863
+OG0000001	anidulans	n7	1.0	Terminal	anidulans_AN11091	anidulans_AN0975, anidulans_AN11044
+OG0000001	anidulans	n8	1.0	Terminal	anidulans_AN0975	anidulans_AN11044
+OG0000001	anidulans	n9	1.0	Terminal	anidulans_AN9046, anidulans_AN9505	anidulans_AN5863
+OG0000001	anidulans	n10	1.0	Terminal	anidulans_AN9046	anidulans_AN9505
+OG0000001	anidulans	n11	1.0	Terminal	anidulans_AN4877, anidulans_AN3047, anidulans_AN2291, anidulans_AN0669, anidulans_AN2732, anidulans_AN5334	anidulans_AN8788
+OG0000001	anidulans	n12	1.0	Terminal	anidulans_AN4877	anidulans_AN3047, anidulans_AN2291, anidulans_AN0669, anidulans_AN2732, anidulans_AN5334
+OG0000001	anidulans	n13	1.0	Terminal	anidulans_AN3047, anidulans_AN2291, anidulans_AN0669	anidulans_AN2732, anidulans_AN5334
+OG0000001	anidulans	n14	1.0	Terminal	anidulans_AN3047, anidulans_AN2291	anidulans_AN0669
+OG0000001	anidulans	n15	1.0	Terminal	anidulans_AN3047	anidulans_AN2291
+OG0000001	anidulans	n16	1.0	Terminal	anidulans_AN2732	anidulans_AN5334
+OG0000002	anidulans	n0	1.0	Terminal	anidulans_AN4079	anidulans_AN9416, anidulans_AN1070, anidulans_AN4291, anidulans_AN10066, anidulans_AN10329, anidulans_AN10127, anidulans_AN5956
+OG0000002	anidulans	n1	1.0	Terminal	anidulans_AN9416, anidulans_AN1070, anidulans_AN4291	anidulans_AN10066, anidulans_AN10329, anidulans_AN10127, anidulans_AN5956
+OG0000002	anidulans	n2	1.0	Terminal	anidulans_AN9416, anidulans_AN1070	anidulans_AN4291
+OG0000002	anidulans	n3	1.0	Terminal	anidulans_AN9416	anidulans_AN1070
+OG0000002	anidulans	n4	1.0	Terminal	anidulans_AN10066	anidulans_AN10329, anidulans_AN10127, anidulans_AN5956
+OG0000002	anidulans	n5	1.0	Terminal	anidulans_AN10329, anidulans_AN10127	anidulans_AN5956
+OG0000002	anidulans	n6	1.0	Terminal	anidulans_AN10329	anidulans_AN10127
+OG0000003	anidulans	n0	1.0	Terminal	anidulans_AN5963	anidulans_AN4335, anidulans_AN8186, anidulans_AN0263, anidulans_AN3048, anidulans_AN9381, anidulans_AN0683
+OG0000003	anidulans	n1	1.0	Terminal	anidulans_AN4335, anidulans_AN8186	anidulans_AN0263, anidulans_AN3048, anidulans_AN9381, anidulans_AN0683
+OG0000003	anidulans	n2	1.0	Terminal	anidulans_AN4335	anidulans_AN8186
+OG0000003	anidulans	n3	1.0	Terminal	anidulans_AN0263, anidulans_AN3048	anidulans_AN9381, anidulans_AN0683
+OG0000003	anidulans	n4	1.0	Terminal	anidulans_AN0263	anidulans_AN3048
+OG0000003	anidulans	n5	1.0	Terminal	anidulans_AN9381	anidulans_AN0683
+OG0000004	anidulans	n0	1.0	Terminal	anidulans_AN2661	anidulans_AN7833, anidulans_AN8207, anidulans_AN3980, anidulans_AN2796, anidulans_AN2711
+OG0000004	anidulans	n1	1.0	Terminal	anidulans_AN7833, anidulans_AN8207, anidulans_AN3980, anidulans_AN2796	anidulans_AN2711
+OG0000004	anidulans	n2	1.0	Terminal	anidulans_AN7833, anidulans_AN8207, anidulans_AN3980	anidulans_AN2796
+OG0000004	anidulans	n3	1.0	Terminal	anidulans_AN7833, anidulans_AN8207	anidulans_AN3980
+OG0000004	anidulans	n4	1.0	Terminal	anidulans_AN7833	anidulans_AN8207
+OG0000005	calbicans	n0	1.0	Terminal	calbicans_lcl|NC_032092.1_cds_XP_716542.2_3581	calbicans_lcl|NC_032095.1_cds_XP_720299.2_4779, calbicans_lcl|NC_032090.1_cds_XP_019330818.1_2310, calbicans_lcl|NC_032092.1_cds_XP_710107.2_3445, calbicans_lcl|NC_032096.1_cds_XP_710262.2_5636, calbicans_lcl|NC_032094.1_cds_XP_710014.2_4619
+OG0000005	calbicans	n1	1.0	Terminal	calbicans_lcl|NC_032095.1_cds_XP_720299.2_4779, calbicans_lcl|NC_032090.1_cds_XP_019330818.1_2310, calbicans_lcl|NC_032092.1_cds_XP_710107.2_3445	calbicans_lcl|NC_032096.1_cds_XP_710262.2_5636, calbicans_lcl|NC_032094.1_cds_XP_710014.2_4619
+OG0000005	calbicans	n2	1.0	Terminal	calbicans_lcl|NC_032095.1_cds_XP_720299.2_4779, calbicans_lcl|NC_032090.1_cds_XP_019330818.1_2310	calbicans_lcl|NC_032092.1_cds_XP_710107.2_3445
+OG0000005	calbicans	n3	1.0	Terminal	calbicans_lcl|NC_032095.1_cds_XP_720299.2_4779	calbicans_lcl|NC_032090.1_cds_XP_019330818.1_2310
+OG0000005	calbicans	n4	1.0	Terminal	calbicans_lcl|NC_032096.1_cds_XP_710262.2_5636	calbicans_lcl|NC_032094.1_cds_XP_710014.2_4619
+OG0000006	anidulans	n0	1.0	Terminal	anidulans_AN0621	anidulans_AN8648, anidulans_AN0368, anidulans_AN7094, anidulans_AN7977
+OG0000006	anidulans	n1	1.0	Terminal	anidulans_AN8648, anidulans_AN0368	anidulans_AN7094, anidulans_AN7977
+OG0000006	anidulans	n2	1.0	Terminal	anidulans_AN8648	anidulans_AN0368
+OG0000006	anidulans	n3	1.0	Terminal	anidulans_AN7094	anidulans_AN7977

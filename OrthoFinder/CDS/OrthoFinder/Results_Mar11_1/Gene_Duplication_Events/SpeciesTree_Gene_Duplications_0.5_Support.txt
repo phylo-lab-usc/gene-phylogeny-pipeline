@@ -1,0 +1,1 @@
+(calbicans_5:0.5,(anidulans_63:1,afumigatus_0:1)N1_0:0.5)N0_0;

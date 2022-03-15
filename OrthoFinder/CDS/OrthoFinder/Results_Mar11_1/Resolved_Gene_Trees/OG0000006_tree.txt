@@ -1,0 +1,1 @@
+(anidulans_AN0621:0.25561,((anidulans_AN8648:0.550036,anidulans_AN0368:0.646497)n2:0.107493,(anidulans_AN7094:0.831615,anidulans_AN7977:0.068949)n3:0.266017)n1:0.25561)n0;

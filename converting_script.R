@@ -5,7 +5,7 @@ library(Biostrings)
 #load final matrix
 orthologs <- read.delim("data/ortholog_final_matrix_0927.tsv")
 
-to_read <- list.files("data/CDS/") %>% unlist()
+to_read <- list.files("data/CDS/")
 
 #load one of the CDS datasets
 afumigatus <- readDNAStringSet("data/CDS/afumigatus.fasta")

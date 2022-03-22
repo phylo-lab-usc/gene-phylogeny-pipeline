@@ -57,12 +57,14 @@ sep_into_gene_fams <- function(orthos){
       dplyr::rename(gene = as.character(i)) %>% left_join(big_data_frame, by = "gene")
     if(nrow(tmp) > 1){
       name = tmp[18,1]
-      tmp <- tmp %>% drop_na()
+      tmp <- tmp %>% drop_na() %>% select(seq, gene)
       saveRDS(tmp, file = paste0("gene_phylogenies/tables/", name))
-      exportFASTA(df, file = paste0("gene_phylogenies/fasta_files/", name, ".fa"))
+      biomaRt::exportFASTA(df, file = paste0("gene_phylogenies/fasta_files/", name, ".fa"))
     }
   }
 }
 
 #An example of what each step in the function above does
-tmp <- orthologs[1,] %>% t() %>% as.data.frame() %>% dplyr::rename(gene = "1") %>% left_join(df, by = "gene")
+tmp <- orthologs[2,] %>% t() %>% as.data.frame() %>% dplyr::rename(gene = "2") %>% left_join(df, by = "gene") %>%
+  drop_na() %>% select(seq, gene)
+biomaRt::exportFASTA(tmp, "test.fa")

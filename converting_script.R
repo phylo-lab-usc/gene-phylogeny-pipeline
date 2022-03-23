@@ -220,18 +220,24 @@ big_data_frame <- map_df(to_read, read_and_fix)
 #Flip orthologs matrix and inner join by row. Because each row represents a gene family, I just need to left join by each row.
 sep_into_gene_fams <- function(orthos){
   for(i in 1:nrow(orthos)){
-    tmp <- orthologs[i,] %>% t() %>% as.data.frame() %>%
-      dplyr::rename(gene = as.character(i)) %>% left_join(big_data_frame, by = "gene")
-    if(nrow(tmp) > 1){
-      name = tmp[18,1]
-      tmp <- tmp %>% drop_na() %>% select(seq, gene)
-      saveRDS(tmp, file = paste0("gene_phylogenies/tables/", name))
-      biomaRt::exportFASTA(df, file = paste0("gene_phylogenies/fasta_files/", name, ".fa"))
+    tmp1 <- orthos[i,] %>% t() %>% as.data.frame()
+    tmp2 <- tmp1 %>%
+      dplyr::rename(gene = as.character(i)) %>%
+      left_join(big_data_frame, by = "gene") %>%
+      drop_na()
+    if(nrow(tmp2) > 1){
+      name = tmp1[18,1]
+      tmp3 <- tmp2 %>% select(seq, gene)
+      saveRDS(tmp3, file = paste0("gene_phylogenies/tables/", name))
+      biomaRt::exportFASTA(tmp3, file = paste0("gene_phylogenies/fasta_files/", name, ".fa"))
     }
   }
 }
 
 #An example of what each step in the function above does
-tmp <- orthologs[2,] %>% t() %>% as.data.frame() %>% dplyr::rename(gene = "2") %>% left_join(big_data_frame, by = "gene") %>%
-  drop_na() %>% select(seq, gene)
-biomaRt::exportFASTA(tmp, "test.fa")
+#tmp <- orthologs[2,] %>% t() %>% as.data.frame() %>% dplyr::rename(gene = "2") %>% left_join(big_data_frame, by = "gene") %>%
+#  drop_na() %>% select(seq, gene)
+#biomaRt::exportFASTA(tmp, "test.fa")
+
+#Running the function
+sep_into_gene_fams(orthologs)

@@ -1,36 +1,30 @@
-#Initializing
+#Snakefile
 
-#rule all:
-  #input:
-    #"arbutus/arbutus.png"
+IDS, = glob_wildcards("gene_phylogenies/fasta_files/{id}.fa")
 
-#rule format:
-  #shell:
-    #"for f in *fa ; do python ~/xxx/OrthoFinder/tools/primary_transcript.py $f ; done"
+rule all:
+  input: expand("gene_phylogenies/trees/{id}.tree", id = IDS)
+  
+rule align:
+  input:
+    "gene_phylogenies/fasta_files/{id}.fa"
+  output:
+    "gene_phylogenies/alignments/{id}"
+  shell:
+    "mafft --auto --thread 8 {input} > {output}"
     
-#rule orthogroup:
-  ##input: #Might not be necessary
-    ##sequences = "data/CDS/{species}.fa"
-    ##orthologs = "data/ortholog_final_matrix_0927.tsv"
-  #output: 
-    #"proteomes/xxx/Orthofinder/Comparative_Genomics_Statistics/Statistics_PerSpecies.tsv"
-  #shell:
-    #"orthofinder -f primary_transcripts/"
+rule trim:
+  input:
+    "gene_phylogenies/alignments/{id}"
+  output:
+    "gene_phylogenies/trimmed/{id}"
+  shell:
+    "trimal -in {input} -out {output}"
     
-#rule ortho_convert:
-  #input:
-    #dictionary = "data/ortholog_final_matrix_0927.tsv"
-    #orthogroups = "proteomes/xxx/Orthofinder/Comparative_Genomics_Statistics/N0.tsv"
-  #output:
-    #"arbutus_ready_matrix.tsv"
-  #shell:
-    #"some_script"
-
-#rule run_R:
-  #input:
-    #trees = "xxx/GeneTrees"
-    #expression_data = "data/coevolution_data.csv"
-  #output:
-    "arbutus/arbutus.png"
-  #script:
-    "scripts/analysis.R"
+rule tree:
+  input:
+    "gene_phylogenies/trimmed/{id}"
+  output:
+    "gene_phylogenies/trees/{id}.tree"
+  shell:
+    "FastTree -nt {input} > {output}"

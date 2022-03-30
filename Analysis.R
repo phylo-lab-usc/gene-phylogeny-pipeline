@@ -97,7 +97,7 @@ runFC <- function ( dat ){
     fit <- ifelse(min(aic) == aic[1], list(c(fitBM, model = "BM")), 
                   ifelse(min(aic) == aic[2], list(c(fitOU, model = "OU")), 
                          list(c(fitEB, model = "EB"))))
-    fitResults[[j]] <- fit
+    fitResults[j] <- fit
   }
   fitResults
 }
@@ -114,31 +114,33 @@ model_count <- function (fit) {
 }
 
 fitResults <- runFC(exp.df)
+saveRDS(fitResults, "arbutus/fitResults")
 
 df <- model_count(fitResults)
 
 b <- df %>% pivot_longer(c(OU, BM, EB), names_to = "model")
 
 b %>% ggplot(aes(model, value)) + geom_col() + theme_classic()
-ggsave("AIC.png")
+ggsave("arbutus/AIC.png")
 
 run_arb <- function (fits){
   arby <- vector("list", length = length(fits))
   count = 1
   for(f in fits){
     class(f) <- "gfit"
-    arby[[count]] <- arbutus(f)
+    arby[[count]] <- tryCatch(arbutus(f), error = function(f)NA)
     count = count + 1
   }
   arby
 }
 
 arb_result <- run_arb(fitResults)
+arb_result <- arb_result[!is.na(arb_result)]
 pvals <- map_df(arb_result, pvalue_arbutus)
-saveRDS(pvals, file = "pvalues_df")
+saveRDS(pvals, file = "arbutus/pvalues_df")
 
 p_piv <- pvals %>% pivot_longer(cols = everything(), names_to = "tstat")
-saveRDS(p_piv, file = "pvalues_table")
+saveRDS(p_piv, file = "arbutus/pvalues_table")
 
 p_piv %>% ggplot(aes(value)) + geom_histogram(aes(y = ..density..)) + facet_wrap(~tstat, nrow = 1) + theme_bw()
-ggsave("arbutus_results.png")
+ggsave("arbutus/arbutus_results.png")

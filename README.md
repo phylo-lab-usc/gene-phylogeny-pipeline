@@ -21,6 +21,15 @@ By identifying the potential difference in model fit and adequacy when different
 
 ### Installation
 
+Installing this pipeline requires `conda` and `git`. Instructions for installing these
+software can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) respectively. 
+
+First, clone the repository by running the following command in a terminal:
+
+```
+git clone https://github.com/pennell-lab-ubc/gene-phylogeny-pipeline
+
+```
 Remember to build the environment using the command below in the terminal:
 ```
 conda env create --file environment.yml
@@ -66,4 +75,10 @@ The CDS fasta files are organized according to species. Within each file(i.e. sp
 
 ## Outputs and Result Analysis
 The outputs should be in the /gene_phylogenies/ directory. Specifically, gene trees should be found in /gene_phylogenies/trees.  
+
+Using gene expression data and gene phylogenies, the arbutus analysis generates model fit and model adequacy results. 
+First, the relative fit AIC results are generated: the fit of three different models (BM, OU and EB) is compared against each other to identify the model with the best fit. Then, for that best model, we analyze the model fit and adequacy in terms of five aspects: ...
+
+Second, we have arbutus results demonstrating the absolute fit. From the test statistics distribution, we can get an idea of how adequate and well distributed the results of a certain model are.
+
 

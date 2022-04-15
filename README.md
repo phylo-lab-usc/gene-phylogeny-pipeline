@@ -80,8 +80,17 @@ The CDS fasta files are organized according to species. Within each file(i.e. sp
 The outputs should be in the /gene_phylogenies/ directory. Specifically, gene trees should be found in /gene_phylogenies/trees.  
 
 Using gene expression data and gene phylogenies, the arbutus analysis generates model fit and model adequacy results. 
-First, the relative fit AIC results are generated: the fit of three different models (BM, OU and EB) is compared against each other to identify the model with the best fit. Then, for that best model, we analyze the model fit and adequacy in terms of five aspects: ...
+First, the relative fit AIC results are generated: the fit of three different models (BM, OU and EB) is compared against each other to identify the model with the best fit. 
+![image](https://user-images.githubusercontent.com/92889727/163086781-89cbdc28-f7e9-4dd1-b343-978caa515326.png)
 
-Second, we have arbutus results demonstrating the absolute fit. From the test statistics distribution, we can get an idea of how adequate and well distributed the results of a certain model are.
+As shown in the AIC figure above, Ornstein-Uhlenbeck (OU) is the model with the best fit for the majority of the genes. 
 
-
+Then, to assess the adequacy of the best model (OU), six test statistics were chosen to balance statistical intuition and computational effort: 
+1. *c.var*: the coefficient of variation (standard deviation/mean) of the absolute value of the contrasts
+2. *d.cdf*: the D statistic obtained from a Kolmolgorov-Smirnov test from comparing the distribution of contrasts to that of a normal distribution with mean 0 and standard deviation equal to the root of the mean of squared contrasts
+3. *m.sig*: the mean of the squared contrasts
+4. *s.asr*: the slope of a linear model fitted to the absolute value of the contrasts against the ancestral state inferred at the corresponding node
+5. *s.hgt*: the slope of a linear model fitted to the absolute value of the contrasts against node depth
+6. *s.var*: the slope of a linear model fitted to the absolute value of the contrasts against their expected variances
+![image](https://user-images.githubusercontent.com/92889727/163417655-d244ea4d-9eda-42a0-8e8c-6d8636bc057f.png)
+All of these test statistics essentially evaluate whether the contrasts come from the distribution expected under BM. Simply speaking, we consider the model to be accurate if the test statistics are well distributed (i.e. nearly rectangular shaped).

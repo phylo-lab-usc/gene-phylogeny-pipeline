@@ -56,7 +56,8 @@ You can choose to have your terminal app ssh-ing into the server or just run the
 
 
 ### Pipeline overview
-![image](https://user-images.githubusercontent.com/92889727/162136287-d11cab09-8563-453c-a581-3e7401fed4ab.png)
+![image](https://user-images.githubusercontent.com/92889727/163547073-83c7a7b5-b1a8-4c73-81de-b4a25d37c442.png)
+
 
 1. Data Acquisition: The data used in the current analysis was obtained from Dr. Cope in his recent study (https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6761-3)
    
@@ -64,7 +65,8 @@ You can choose to have your terminal app ssh-ing into the server or just run the
 
 3. Alignment using MAFFT: This is the first step of the snakemake pipeline. The CDS fasta files of each gene family is used as input and the sequences are aligned together using MAFFT (a program for multiple sequence alignment). 
 
-4. Trimming: As shown in the ortholog matrix, for a speicfic gene family, some species may have missing gene expression data. In this case, the species without expression data will be trimmed off the gene phylogenetic tree.
+4. FastTree: From the aligned sequences, approximately-maximum-likelihood phylogenetic trees are built using FastTree.   
+5. Trimming: As shown in the ortholog matrix, for a speicfic gene family, some species may have missing gene expression data. In this case, the species without expression data will be trimmed off the gene phylogenetic tree.
 
 5. Treeparser: This step turns the trees generated into tree objects that are readble by R. This is necessary for using the trees as input for the subsequent arbutus analysis.
 

@@ -20,6 +20,12 @@ col_names <- colnames(exp.df)[colnames(exp.df) %in% tree_names]
 exp.df <- exp.df %>% as.data.frame() %>% dplyr::select(all_of(col_names)) %>% as.matrix()
 trees <- readRDS(tree.file)
 
+author_genes <- read_tsv(file = "data/control_set_consistent_w_bm.txt") %>%
+  pivot_longer(cols = !c(Type, Score), values_to = "Prot") %>%
+  select(!name) %>% unique() %>% pull(Prot)
+
+d.df <- exp.df[,author_genes]
+
 #replace gene IDs with species names
 convert <- function(phylo){
   ndiscreta <- phylo$tip.label %>% str_which("NEUDI")

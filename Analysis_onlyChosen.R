@@ -5,7 +5,7 @@ library(geiger)
 library(phytools)
 library(tidyverse)
 library(arbutus)
-
+library(parallel)
 
 tree.file <- "gene_phylogenies/genetrees"
 gene.exp <- "data/gene_expression_tpm_matrix_updated_Standard.LogNorm.tsv"
@@ -14,17 +14,17 @@ last4 <- function(string){
   substr(string,1,nchar(string)-5)
 }
 
-tree_names <- list.files("gene_phylogenies/trees/") %>% as.list() %>% as.character() %>% map_chr(last4)
-exp.df<- t(read.table(gene.exp,sep="\t",header=T,row.names = 1,stringsAsFactors = F))
-col_names <- colnames(exp.df)[colnames(exp.df) %in% tree_names]
-exp.df <- exp.df %>% as.data.frame() %>% dplyr::select(all_of(col_names)) %>% as.matrix()
-trees <- readRDS(tree.file)
-
 author_genes <- read_tsv(file = "data/control_set_consistent_w_bm.txt") %>%
   pivot_longer(cols = !c(Type, Score), values_to = "Prot") %>%
   select(!name) %>% unique() %>% pull(Prot)
 
-d.df <- exp.df[,author_genes]
+tree_names <- list.files("gene_phylogenies/trees/") %>% as.list() %>% as.character() %>% map_chr(last4)
+temp.df<- t(read.table(gene.exp,sep="\t",header=T,row.names = 1,stringsAsFactors = F))
+exp.df <- temp.df[,author_genes]
+col_names <- colnames(exp.df)[colnames(exp.df) %in% tree_names]
+exp.df <- exp.df %>% as.data.frame() %>% dplyr::select(all_of(col_names)) %>% as.matrix()
+trees <- readRDS(tree.file)
+
 
 #replace gene IDs with species names
 convert <- function(phylo){
@@ -120,36 +120,30 @@ model_count <- function (fit) {
 }
 
 fitResults <- runFC(exp.df)
-saveRDS(fitResults, "arbutus/fitResults")
+saveRDS(fitResults, "arbutus/fitResults_chosen")
 
 df <- model_count(fitResults)
 
 b <- df %>% pivot_longer(c(OU, BM, EB), names_to = "model")
 
 b %>% ggplot(aes(model, value)) + geom_col() + theme_classic()
-ggsave("arbutus/AIC.png")
+ggsave("arbutus/AIC_chosen.png")
 
 run_arb <- function (fits){
-  arby <- vector("list", length = length(fits))
-  count = 1
-  for(f in fits){
-    class(f) <- "gfit"
-    arby[[count]] <- tryCatch(arbutus(f), error = function(f)NA)
-    count = count + 1
-  }
-  arby
+  class(fits) <- "gfit"
+  arby <- tryCatch(arbutus(fits), error = function(f)NA)
 }
 
-arb_result <- run_arb(fitResults)
+arb_result <- mclapply(fitResults, run_arb, mc.cores = 16)
 arb_result <- arb_result[!is.na(arb_result)]
 pvals <- map_df(arb_result, pvalue_arbutus)
-saveRDS(pvals, file = "arbutus/pvalues_df")
+saveRDS(pvals, file = "arbutus/pvalues_df_chosen.rds")
 
 p_piv <- pvals %>% pivot_longer(cols = everything(), names_to = "tstat")
-saveRDS(p_piv, file = "arbutus/pvalues_table")
+saveRDS(p_piv, file = "arbutus/pvalues_table_chosen.rds")
 
 p_piv %>% ggplot(aes(value)) + geom_histogram(aes(y = ..density..)) + facet_wrap(~tstat, nrow = 1) + theme_bw()
-ggsave("arbutus/arbutus_results.png")
+ggsave("arbutus/arbutus_results_chosen.png")
 
 p_inade <- pvals %>% select(!m.sig) %>% 
   transmute(c.less = c.var <= 0.05, sv.less = s.var <= 0.05, sa.less = s.asr <= 0.05, sh.less = s.hgt <= 0.05, d.less = d.cdf <= 0.05) %>% 
